@@ -6,7 +6,8 @@ const morgan = require("morgan");
 const connectDB = require("./config/db");
 
 //DOT ENV
-dotenv.config();
+require("dotenv").config();
+// dotenv.config();
 
 //MONDODB Connection
 connectDB();
