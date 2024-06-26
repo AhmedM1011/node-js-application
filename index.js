@@ -30,7 +30,7 @@ app.get("", (req, res) => {
 app.use("/api/v1/auth", require("./routes/userRoutes"));
 
 //PORT
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 8080;
 
 //Listen
 app.listen(PORT, () => {
