@@ -1,11 +1,16 @@
+
+const dotenv = require('dotenv');
+dotenv.config();
+
+console.log('Cloudinary Name:', process.env.CLOUDINARY_NAME);  // Should print the value from your .env file
+console.log('API Key:', process.env.API_KEY);                    // Should print the value from your .env file
+console.log('API Secret:', process.env.API_SECRET);              // Should print the value from your .env file
+
 const express = require("express");
 const cors = require("cors");
 const colors = require("colors");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
-const dotenv = require("dotenv");
-
-dotenv.config();
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URL)
