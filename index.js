@@ -2,6 +2,8 @@
 const dotenv = require('dotenv');
 dotenv.config();
 
+console.log('port:', process.env.PORT);
+console.log('JWT_SECRET:', process.env.JWT_SECRET);
 console.log('Cloudinary Name:', process.env.CLOUDINARY_NAME);  // Should print the value from your .env file
 console.log('API Key:', process.env.API_KEY);                    // Should print the value from your .env file
 console.log('API Secret:', process.env.API_SECRET);              // Should print the value from your .env file
