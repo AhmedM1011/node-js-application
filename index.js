@@ -35,7 +35,24 @@ cloudinary.api.ping()
 const app = express();
 
 // Middleware
-app.use(cors({ origin: 'https://interview-task-eosin.vercel.app' }));
+const allowedOrigins = [
+	'https://interview-task-one-eta.vercel.app', // Production domain
+	'http://localhost:3000',                    // Local development domain
+  ];
+  
+  app.use(
+	cors({
+	  origin: (origin, callback) => {
+		// Allow requests with no origin (like mobile apps or curl requests)
+		if (!origin || allowedOrigins.includes(origin)) {
+		  callback(null, true);
+		} else {
+		  callback(new Error('Not allowed by CORS'));
+		}
+	  },
+	  credentials: true, // Allow credentials to be sent with requests
+	})
+  );
 app.use(express.json());
 app.use(morgan("dev"));
 
