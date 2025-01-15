@@ -1,4 +1,4 @@
-const fs = require('fs');  // Import fs module
+const fs = require('fs'); 
 const signinModel = require("../models/signinModel");
 const uploadOnCloudinary = require("../utils/UploadOnCloudinary");
 

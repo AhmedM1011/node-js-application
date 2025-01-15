@@ -34,7 +34,13 @@ const app = express();
 // app.use(cors(corsOptions));
 app.use(express.json());
 app.use(morgan("dev"));
-cloudinaryconfig
+
+const cloudinaryconfig = cloudinary.config({
+	cloud_name: process.env.CLOUDINARY_NAME,
+	api_key: process.env.API_KEY,
+	api_secret: process.env.API_SECRET
+});
+// cloudinaryconfig
 
 cloudinary.api.ping((error, result) => {
 	if (error) {
