@@ -5,7 +5,7 @@ const colors = require("colors");
 const morgan = require("morgan");
 const connectDB = require("./config/db");
 const mongoose = require("mongoose");
-const { cloudinaryconfig } = require("./utils/cloudinaryConfig");
+// const { cloudinaryconfig } = require("./utils/cloudinaryConfig");
 const cloudinary = require("cloudinary").v2;
 
 
