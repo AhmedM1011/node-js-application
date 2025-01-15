@@ -32,6 +32,16 @@ app.use("/api/v1/auth", require("./routes/userRoutes"));
 //PORT
 const PORT = process.env.PORT || 8080;
 
+//MONDODB Connection
+// connectDB();
+	mongoose.connect(process.env.MONGO_URL).then(() => {
+		console.log('mongodb connected');
+	  
+	  }).catch((err) => {
+		console.log(err);
+	  
+	  })
+
 //Listen
 app.listen(PORT, () => {
 	console.log(`Server Running ${PORT}`.bgGreen.white);
