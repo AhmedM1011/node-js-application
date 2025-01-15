@@ -35,10 +35,7 @@ cloudinary.api.ping()
 const app = express();
 
 // Middleware
-const allowedOrigins = [
-	'https://interview-task-one-eta.vercel.app', // Production domain
-	'http://localhost:3000',                    // Local development domain
-  ];
+const allowedOrigins = "*"
   
   app.use(
 	cors({
