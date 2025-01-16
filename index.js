@@ -1,12 +1,6 @@
 
 const dotenv = require('dotenv');
-dotenv.config();
-
-console.log('port:', process.env.PORT);
-console.log('JWT_SECRET:', process.env.JWT_SECRET);
-console.log('Cloudinary Name:', process.env.CLOUDINARY_NAME);  // Should print the value from your .env file
-console.log('API Key:', process.env.API_KEY);                    // Should print the value from your .env file
-console.log('API Secret:', process.env.API_SECRET);              // Should print the value from your .env file
+dotenv.config();             
 
 const express = require("express");
 const cors = require("cors");
@@ -43,14 +37,13 @@ const allowedOrigins = [
   app.use(
 	cors({
 	  origin: (origin, callback) => {
-		// Allow requests with no origin (like mobile apps or curl requests)
 		if (!origin || allowedOrigins.includes(origin)) {
 		  callback(null, true);
 		} else {
 		  callback(new Error('Not allowed by CORS'));
 		}
 	  },
-	  credentials: true, // Allow credentials to be sent with requests
+	  credentials: true, 
 	})
   );
 app.use(express.json());
