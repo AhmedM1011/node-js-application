@@ -35,7 +35,7 @@ const app = express();
 
 // Middleware
 const allowedOrigins = [
-	'https://interview-task-one-eta.vercel.app', // Production domain
+	'https://interview-task-virid.vercel.app', // Production domain
 	'http://localhost:3000',                    // Local development domain
   ];
   
